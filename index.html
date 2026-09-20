@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karenya Studio 已搬遷</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink:#f3ece1;          /* 米白，跟 Studio 登入頁同一種 */
+    --ink-dim:#9aa6bd;
+    --ground:#111826;       /* 深夜藍 */
+    --panel:#161f31;
+    --edge:#2a3650;
+    --gold:#e8c88a;
+    --coral:#d9573c;
+    --coral-hi:#e9694e;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    min-height:100dvh;
+    background:
+      radial-gradient(1100px 620px at 50% -12%, #1b2740 0%, transparent 62%),
+      var(--ground);
+    color:var(--ink);
+    font:400 16px/1.75 "Noto Sans TC", system-ui, -apple-system, "Segoe UI", sans-serif;
+    display:grid;
+    place-items:center;
+    padding:
+      calc(32px + env(safe-area-inset-top, 0px)) 20px
+      calc(32px + env(safe-area-inset-bottom, 0px));
+  }
+  .card{
+    width:min(560px, 100%);
+    background:var(--panel);
+    border:1px solid var(--edge);
+    border-radius:4px;
+    padding:clamp(28px, 6vw, 48px);
+    box-shadow:0 24px 70px rgba(0,0,0,.45);
+  }
+  .eyebrow{
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ink-dim); margin:0 0 20px;
+  }
+  .eyebrow b{color:var(--gold); font-weight:500}
+  h1{
+    font-family:"Noto Serif TC", Georgia, serif;
+    font-weight:700; font-size:clamp(26px, 6vw, 34px); line-height:1.35;
+    margin:0 0 18px; text-wrap:balance;
+  }
+  p{margin:0 0 16px; color:#d8dced}
+  .why{
+    margin:26px 0 0; padding:18px 20px;
+    background:#101728; border-left:2px solid var(--gold); border-radius:2px;
+  }
+  .why h2{
+    font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--gold); font-weight:500; margin:0 0 10px;
+  }
+  .why ul{margin:0; padding-left:18px; color:var(--ink-dim); font-size:15px}
+  .why li{margin:6px 0}
+  .why strong{color:var(--ink); font-weight:500}
+  .cta{
+    display:inline-block; margin-top:30px;
+    background:var(--coral); color:#fff; text-decoration:none;
+    padding:13px 26px; border-radius:3px; font-weight:500; letter-spacing:.02em;
+    transition:background .15s ease;
+  }
+  .cta:hover,.cta:focus-visible{background:var(--coral-hi)}
+  .cta:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+  .foot{
+    margin:26px 0 0; padding-top:18px; border-top:1px solid var(--edge);
+    font-size:13px; color:#6f7c96;
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow"><b>Karenya Studio</b> · 已搬遷</p>
+
+    <h1>這個看板搬到 Cloudflare 了</h1>
+
+    <p>為了多一層防護，Studio 改由 Cloudflare 託管，<strong>並在網站前面加上一道存取驗證</strong>。沒有通過驗證的人，連頁面檔案本身都拿不到。</p>
+
+    <p>新的位置沒有公開，如果你該知道，你已經知道了。</p>
+
+    <div class="why">
+      <h2>這次改了什麼</h2>
+      <ul>
+        <li>託管從單一供應商改成<strong>兩條獨立的路</strong>，一邊出事另一邊還在</li>
+        <li>在應用程式的登入之外，多了一層<strong>擋在檔案前面</strong>的驗證</li>
+        <li>整個過程<strong>沒有動到任何一筆資料</strong></li>
+      </ul>
+    </div>
+
+    <a class="cta" href="https://karenyalin.com/" target="_blank" rel="noopener">
+      到作品集看完整做法 →
+    </a>
+
+    <p class="foot">這一頁只是告示。舊網址不會再更新。</p>
+  </main>
+</body>
+</html>
